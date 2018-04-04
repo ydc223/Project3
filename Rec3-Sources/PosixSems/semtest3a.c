@@ -30,7 +30,7 @@ int main(int argc,char **argv)
 	if (sp == (void *) -1) { perror("Attachment."); exit(2);}
 
 	/* Initialize the semaphore. */
-	retval = sem_init(sp,1,1);
+	retval = sem_init(sp,1,2);
 	if (retval != 0) {
 		perror("Couldn't initialize.");
 		exit(3);

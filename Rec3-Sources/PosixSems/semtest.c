@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 		exit(3);
 	}
 	
-	retval = sem_wait(&sp);
+	retval = sem_trywait(&sp);
 	printf("Did trywait. Returned %d >\n",retval); getchar();
 	
 	retval = sem_trywait(&sp);
